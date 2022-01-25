@@ -2,17 +2,21 @@
     margin:0;
     padding: 0;
 }
-
-.container{
+/* body{
+    background-color: purple;
+} */
+.flex-container{
     /* margin: 0; */
     display: flex;
- 
+    /* flex-wrap: wrap;   */
+    flex-direction: column;
 
 }
 /* Developer pic section */
 
 .devPic{
-    width:450px;
+    flex: 20%;
+    /* width:450px; */
     /* height: auto; */
     background-color: rgb(168, 165, 165);
     /* margin: 0; */
@@ -26,17 +30,32 @@
     margin-right: 20%; */
     /* justify-content: center; */
     display: block;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     /* width: 50%; */
 }
 .devPic button{
-    font-size: 13px;
+    display: block;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 6px;
+    font-size: 13px;
     padding: 10px;
+    /* 
     margin-top: 40%;
-    margin-left: 35%;
+    margin-left: 35%; */
     background-color: rgb(36, 222, 246);
+}
+.devPic a{
+    margin-top: 50%;
+    margin-left: 10%;
+    color: black;
+}
+.devPic p{
+    margin-top: auto;
+    margin-left: 10%;
 }
 
 /* End Developer pic Section */
@@ -44,113 +63,97 @@
 /* Developer Info Css */
 
 .info-container{
-    margin-left: 5%;
+    flex: 80%;
+    /* margin-left: 5%; */
     /* width: 100vmax;
     height:100vmax; */
-    /* background-color: rgb(228, 224, 224); */
+    background-color: rgb(229, 245, 11);
 }
 
-.devAbout{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    padding: 50px;
+.devName{
+    margin-left: 5%;
+}
+
+.devName h1{
+    font-size: 50px;
+    justify-content: center;
+}
+.devName p{
     font-size: 30px;
-    transition: width 0.2s;
 }
-.devAbout p{
-    margin-top: 30px;
-}
-
 .devEdu{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    padding: 50px;
-    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 5%;
 }
-.devEdu p{
-    margin-top: 30px;
+.devEdu h1{
+    font-size: 40px;
 }
 .devEdu ul{
     list-style: none;
-    padding-top: 40px;
 }
-
-.devAchivement{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    padding: 50px;
+.devEdu li{
+    padding-top: 5px;
     font-size: 30px;
 }
-.devAchivement p{
-    margin-top: 30px;
+
+.devAchiev{
+    margin-top: 2%;
+    margin-left: 5%;
 }
-.devAchivement ul{
-    list-style: none;
-    padding-top: 40px;
+.devAchiev h1{
+    font-size: 40px;
 }
 
+.devAchiev ul{
+    list-style: none;
+}
+.devAchiev li{
+    padding-top: 5px;
+    font-size: 30px;
+}
+.devSkill{
+    margin-top: 2%;
+    margin-left: 5%;
+}
 .skill-card{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
 }
-
-.devSkill{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    /* padding: 50px; */
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: max-content;
+    padding: 5px;
+}
+.card p{
     font-size: 30px;
 }
-.devSkill p{
-    margin-top: 30px;
-}
-
-.card {
-    margin-top: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: max-content;
-    padding: 10px;
-    font-size: 20px;
-  }
 
 .devProject{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    padding: 50px;
-    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 5%;
 }
-.devProject p{
-    margin-top: 30px;
+.project-card{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction:column ;
+    justify-content: space-between;
 }
-
 .devHobbies{
-    margin: 57px auto;
-    background-color: white;
-    width: 50vw;
-    height: max-content;
-    border-radius: 10px;
-    padding: 50px;
-    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 5%;
 }
-.devHobbies p{
-    margin-top: 30px;
+.hobbies-card{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-@media screen and (flex: 500px) {
-    .info-container, .devPic {
-      flex: 100%;}}
+.footer{
+    font-size: 20px;
+    background-color: rgb(36, 222, 246);
+}
+@media(min-width:600px){
+    .flex-container{
+        flex-direction: row;
+    }
+}
